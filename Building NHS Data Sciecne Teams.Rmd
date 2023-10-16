@@ -1,0 +1,244 @@
+---
+title: "Building NHS Data Science Teams"
+author: "**`r Sys.getenv('MY_NAME')` - `r Sys.getenv('MY_EMAIL')`**<br />`r Sys.getenv('MY_JOBTITLE')`"
+institute: "North Central London ICB"
+output:
+  NCLRtemplates::ncl_presentation: default
+---
+
+```{r setup, include = FALSE}
+# check that the following environment variables are set
+# set these in a file file called .Renviron: e.g.
+# MY_NAME=Joe Bloggs
+# MY_EMAIL=joe.bloggs@nhs.net
+# MY_JOBTITLE=Analyst
+stopifnot(Sys.getenv("MY_NAME") != "")
+stopifnot(Sys.getenv("MY_EMAIL") != "")
+stopifnot(Sys.getenv("MY_JOBTITLE") != "")
+
+library(Cairo)
+library(knitr)
+library(tidyverse)
+library(NCLRtemplates)
+
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"))
+
+# Set's the base ggplot theme to the Strategy Unit Theme
+theme_set(theme_nclicb())
+
+# uncomment the following lines if you want to use the Strategy Unit theme
+# colours by default
+# scale_fill_continuous <- partial(scale_fill_ncl, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_ncl, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_ncl, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_ncl, discrete = TRUE)
+```
+
+class: ncl-default 
+
+.pull-left[
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Just my opinions...
+
+### You learn from your ~~mistakes~~ experience
+
+...also, a little about my journey...
+
+]
+
+.pull-right[
+<br>
+<br>
+<br>
+<center><img src="https://imgs.xkcd.com/comics/qualifiers.png" alt="XKCD comic, where person is uncertain and using a lot of qualifiers" width="230px"/> <br>
+<b>Source:</b> <a href="https://xkcd.com/2158/" style="color: #004DCF">XKCD </a></center>
+]
+---
+class: ncl-default
+# My experience
+
++ Started in public health: cancer registries
+
+
++ A year in clinical network: analyst / general techie / dogsbody
+
+
++ Acute trust, general analyst & BI developer - UHB
+
+
++ Senior analyst role with NHS benchmarking system
+  + Significant step in difficulty
+  + Consultancy/outward-facing elements
+  + Became responsible for statistical elements
+  + PhD study, whilst working for UHB
+
+
++ Analytical Manager / Lead, Patient Safety - NHSE
+
+
++ Deputy Director Specialist Analytics - NCL ICB
+
+
++ ICB Head Data Scientist BSOL from November
+
+
+---
+class: ncl-default
+# Key thoughts
+
+<br>
+
+### 1. Build allies
+
+### 2. Understand the question
+
+### 3. Be, or employ, a technical leader
+
+### 4. Release your analysts / data scientists / data engineers
+
+### 5. Leadership is a skill - invest in it.
+
+---
+class: ncl-default
+# 1. Build allies
+
+## Internal
++ Senior sponsorship in you organisation.
+
++ IT / cyber-security colleagues.
+
++ Project / service leads.
+
+--
+
+## External
++ Your own local economy.
+
++ Regional or National Groups - NHS-R.
+
++ Identify teams/project/people that you like and contact them.
+
++ More room to work together than you might think.
+
++ Increasing use of Open Licences too!
+
+
+---
+class: ncl-default
+# Understand the question
+
+.pull-left[
++ For each piece of analysis
+
++ For your team or organisation's priorities
+
++ Don't be afraid to work at a question until it's clear
+
++ Use the question as a tool to build your team: e.g. training
+
++ Don't be afraid to say 'no'
+
++ People will go around you if you aren't helpful
+
+]
+
+
+.pull-right[
+<br>
+<center><img src="https://imgs.xkcd.com/comics/question.png" alt="XKCD comic, saying 'Dear Isaac, do you like me? With possible answers 'yes' and 'no', and extra writing saying 'this is as yet insufficient data for a meaningful answer' " width="300px"/><br>
+<b>Source:</b> <a href="https://xkcd.com/1448/" style="color: #004DCF">XKCD </a></center>
+]
+
+---
+class: ncl-default
+# 3. Be, or employ, a technical leader
+
+.pull-left[
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--maUIxfjX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/w9iry6gui9ane19djuv5.png" alt="Diagram of technologies used in a tech stack"><p><b>Source:</b><a href="https://dev.to/minchulkim87/my-data-science-tech-stack-2020-1poa" style="color: #004DCF"> My Data Science Tech Stack 2020 </a></p>
+]
+
+.pull-right[
++ Get the experience in!
+
++ Study if you get the opportunity, because you'll learn a lot.
+
++ You are in a marathon, not a sprint:
+ + What tech do you teams currently use?
+ + What sort of question do they answer?
+ + Do you have any budget?
+ + Can you use a question to skill your team up?
+ 
++ Work out where you want to get to, and how, with a timescale
+ 
++ Demonstrate return on investment / what-if
+
++ Ask for forgiveness rather than permission
+]
+
+---
+class: ncl-default
+# 4. Release your analysts / data scientists
+
++ Recruit good people - you might have to think about how you recruit
+
++ If you have keen / experienced managers, give them a purpose / direction
+
++ If you have keen / skilled junior team members
+
++ Most people don't think they are a data scientist at first
+
++ Train people, allow them to attend things and grow
+
++ Allow them the space to try new things
+
+
+<center><iframe src="https://giphy.com/embed/3o6fIVCYOLGPO1cfYc" width=600" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/david-freedom-braveheart-3o6fIVCYOLGPO1cfYc" style="font-size: 12pt;colour: #004DCF"">via GIPHY</a></p></center>
+
+---
+class: ncl-default
+
+# 5. Leadership is a skill - invest in it.
+
++ As the leader, it's your job to give everyone in your team a direction
+
++ It's not for you to solve their problems for them
+
++ Delegate
+
++ It's ok for people to do things differently than you would
+
+--
+
++ Vision is important - 
+  + Is a good techie a poor leader?
+  + Is a good leader a poor techie?
+
+--
+
++ I don't know many 'born leaders'.  Most of us learn
+
++ Find people who you respect to learn from
+
++ This takes time and you will make mistakes
+
++ Learn ways to counter for your weaknesses
+
+---
+class: middle center
+
+# Thanks!
+## Questions?
+
+c.mainey1@nhs.net
