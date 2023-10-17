@@ -137,7 +137,7 @@ class: ncl-default
 
 ---
 class: ncl-default
-# Understand the question
+# 2. Understand the question
 
 .pull-left[
 + For each piece of analysis
@@ -248,5 +248,5 @@ c.mainey1@nhs.net
 
 .pull-right[
 <br><br><br><br><br>
-<iframe src="https://giphy.com/embed/MPuTZQqOmYKPK" width="480" height="282" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thegoodfilms-film-the-big-lebowski-dude-MPuTZQqOmYKPK" style="font-size: 12pt;colour: #004DCF">via GIPHY</a></p>
+<center><iframe src="https://giphy.com/embed/MPuTZQqOmYKPK" width="480" height="282" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thegoodfilms-film-the-big-lebowski-dude-MPuTZQqOmYKPK" style="font-size: 12pt;colour: #004DCF">via GIPHY</a></p></center>
 ]
